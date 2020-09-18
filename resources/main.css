@@ -192,42 +192,49 @@ aside .black-article, footer{
     .menu-mobile, aside .black-article,footer {
          display: block;  
     }
-    aside, main, footer {
+    aside, main,footer {
         width: 100%;
-        font-size: 11px;
+        font-size: 10px;
     }
-
-    .aside{
-        flex-direction: row;
-        margin-right: 0;
-        height: 250px;
-    } 
-    main {
-        background-size:cover;
-        height: 250px;
-        }
-    footer{
+    aside, main{
         height: 200px;
+    }
+    footer{
+        height: auto;
+       
+    }
+    .aside, footer{
         flex-direction: row;
     }
+    .aside{
+      
+        margin-right: 0;
+       
+    } 
+    
     summary h1{
-        font-size: 20px;
+        font-size: 15px;
     
     }
     .title-wrapper h2{
-        font-size: 15px;
+        font-size: 12px;
     }
     
     h3,.submit-button{
         font-size: 10px;
     }
-    footer h3{
-        padding-top: 10px;
+    .submit-button{
+        padding: 5px;
+        width: 60px;
+       height: 25px;
     }
     footer .nude-article,aside summary, aside .black-article{
         height: 100%;
         width: 100%;
 
+    }
+    .nude-article{
+        padding: 5px 0 7px 5px;
     }
     .menu-desktop,
      .bottom-wrapper .black-article,
