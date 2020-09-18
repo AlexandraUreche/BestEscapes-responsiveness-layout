@@ -99,7 +99,7 @@ summary{
 main{
     
     background-image: url(../assets/bg.jpg);
-    background-size:contain;
+    background-size:cover;
     background-position: right;
     background-repeat: no-repeat;
 }
@@ -149,10 +149,10 @@ main{
 }
 
 .gallery-nav .previous-arrow::before {
-    content: '\e805';
+    content: '<';
 }
 .gallery-nav .next-arrow::before{
-    content: '\e806';
+    content: '>';
 }
 .previous-arrow::before, .next-arrow::before {
     height: 35px;
