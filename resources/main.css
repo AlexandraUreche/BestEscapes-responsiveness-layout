@@ -135,6 +135,7 @@ main{
     max-width: 330px;
 }
 .gallery-nav button{
+    /* nu inteleg de ce nu iai pus pur si simplu iconitele ca si content in button si te-ai complicat cu font-size:0, si before */
     font-size: 0;
     line-height: 0;
     cursor: pointer;
@@ -149,7 +150,10 @@ main{
 }
 
 .gallery-nav .previous-arrow::before {
-    content: '<';
+    /* pentru content ai nevoie de unicode si setul de coduri atasate. iti atasez si un screenshot de unde se gasesc unicode-urile in documentatie. desi insist nu este cea mai simpla metoda cea pe care ai ales-o. */
+    content: '\f359';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 .gallery-nav .next-arrow::before{
     content: '>';
@@ -197,6 +201,7 @@ aside .black-article, footer{
         font-size: 10px;
     }
     aside, main{
+        /* prea putin ai limitat la 200px aici. pe mobile ar trebui sa foloseasca cel putin tot viewport-ul vertical si daca e nevoie sa se apeleze si la scroll. iti atasez cum vad eu, imi ramane foarte mult spatiu care nu e folosit deloc si e pacat de el */
         height: 200px;
     }
     footer{
