@@ -8,7 +8,6 @@ html, body{
     height: 100%;
 }
 .principal-wrapper{
-    position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -232,17 +231,18 @@ footer{
     .menu-desktop,.gallery-nav{
         display: none;
     }
-
-    #MobileWrapper{
-        width: 100%;
-        height: 100%;
-        color: white;
-       /* position: fixed;*/
-        font-size: 18px;
-        z-index: 2;
+    .principal-wrapper{
+        position: fixed;
     }
-    .mobile-menu-wrapper .title-wrapper h2{
+    #MobileWrapper{
+       width: 100%;
+       height: 100%;
+       position: relative;
+       z-index: 2;
+    }
+    .mobile-menu-wrapper .title-wrapper h2, .mobile-menu-wrapper nav{
         color: white;
+        font-size: 20px;
         padding: 10px 0 0 10px;
     }
     .mobile-menu-wrapper, .list-menu nav{
@@ -257,8 +257,8 @@ footer{
         justify-content: space-between;
     }
    .mobile-menu-wrapper .title-wrapper .close-wrapper{
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         padding: 10px 10px 0 0;
     }
     .close-wrapper img{
@@ -275,6 +275,7 @@ footer{
         width: 50%;
         justify-content: center;
         align-items: center;
+        border: none;
         border: 1px solid #fff;
         border-bottom: none;
     }
@@ -284,4 +285,21 @@ footer{
     .social-icons div:nth-child(2){
         border-right: none;
     }
+    .mobile-menu-wrapper nav{
+        font-family: 'Barlow', sans-serif;
+        font-size: 35px;
+        font-weight: 100;
+    }
+    .mobile-menu-wrapper nav a{
+        padding-bottom: 20px;
+        opacity: 0.6;
+    }
+    .mobile-menu-wrapper nav a:first-child{
+        opacity: unset;
+        font-weight: 400;
+    }
+    .social-icons .fas, .social-icons .fab{
+        color: rgba(144,144,144);
+        font-size: 25px;
+    } 
 }
