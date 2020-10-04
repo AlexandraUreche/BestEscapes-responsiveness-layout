@@ -135,7 +135,8 @@ main{
     max-width: 330px;
 }
 .gallery-nav button{
-    /* nu inteleg de ce nu iai pus pur si simplu iconitele ca si content in button si te-ai complicat cu font-size:0, si before */
+    /* nu inteleg de ce nu iai pus 
+    pur si simplu iconitele ca si content in button si te-ai complicat cu font-size:0, si before */
     font-size: 0;
     line-height: 0;
     cursor: pointer;
