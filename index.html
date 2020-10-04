@@ -11,9 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Literata:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
-    <!-- nu asa folosim webfonts, ele sunt intern folosite in all.css care apartine fontawesome -->
-    <!-- <link href="bundles/font-awesome/webfonts/fa-brands-900.woff" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" href="resources/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/main-homepage.css">
 </head>
 
 <body>
@@ -29,60 +27,82 @@
                     <a target="_parent" href="index.html">Last minute</a>
                     <a target="_parent" href="index.html">Register/Login</a>
                 </nav>
-                <nav class="menu-mobile">
+                <nav class="menu-mobile" id="seeMobileWrapperBtn">
                     <a><i class="fas fa-bars"></i></a>
                 </nav>
             </div>
         </header>
-        <section>
-            <main>
-                <div class="bottom-wrapper">
+        <div class="section-wrapper">
+            <div class="main-wrapper">
+                <div class="left-side-wrapper">
+                    <summary>
+                        <div class="title-wrapper">
+                            <div>travel</div>
+                            <div>and inspire your life</div>
+                        </div>
+                        <p>We make your dreams come true. Just design your travel with us and start to inspire your
+                            life.</p>
+                        <p>Your perfect travel is just as far as a few clicks.
+                        </p>
+                        <div class="gallery-nav">
+                            <button type="button"><i class="fas fa-caret-left"></i></button>
+                            <button type="button"><i class="fas fa-caret-right"></i></button>
+                        </div>
+                    </summary>
                     <div class="black-article">
                         <h3>Weekend escapes</h3>
                         <p>2 days, 48 hours. We have the best weekend escapes for your pleasure.</p>
                         <h3>Week trips</h3>
                         <p>Europe, Asia, a lost island...take a plane and forget your routine for a full week.</p>
                     </div>
-                    <div class="nude-article">
-                        <h3>Design your own holidays</h3>
-                        <p>With our online personalized interface you can design the holidays of your dreams.
-                            Select the date and destination and we take care of everything.
-                        </p>
-                        <button type="submit" class="submit-button"> Start</button>
-                    </div>
                 </div>
-            </main>
-            <aside>
-                <summary>
-                    <h1>travel and inspire your life</h1>
-                    <p>We make your dreams come true.
-                        Just design your travel with us and start to inspire your life.</p>
-                    <p>Your perfect travel is just as far as a few clicks.</p>
-                    <div class="gallery-nav">
-                        <button type="button" class="previous-arrow"> Previous</button>
-                        <button type="button" class="next-arrow">Next</button>
-                    </div>
-                </summary>
-                <div class="black-article">
-                    <h3>Weekend escapes</h3>
-                    <p>2 days, 48 hours. We have the best weekend escapes for your pleasure.</p>
-                    <h3>Week trips</h3>
-                    <p>Europe, Asia, a lost island...take a plane and forget your routine for a full week.</p>
-                </div>
-
-            </aside>
-        </section>
-        <footer>
-            <div class="nude-article">
-                <h3>Design your own holidays</h3>
-                <p>With our online personalized interface you can design the holidays of your dreams.
-                    Select the date and destination and we take care of everything.
-                </p>
-                <button type="submit" class="submit-button"> Start</button>
+                <div class="image-wrapper"></div>
             </div>
+            <footer>
+                <div class="nude-article">
+                    <h3>Design your own holidays</h3>
+                    <p>With our online personalized interface you can design the holidays of your dreams.
+                        Select the date and destination and we take care of everything.
+                    </p>
+                    <button type="submit" class="submit-button"> Start</button>
+                </div>
 
-        </footer>
+            </footer>
+        </div>
+        
     </div>
+    <div id="MobileWrapper" class="mobile-menu-wrapper hidden">
+        <div class="title-wrapper">
+            <h2>Best Escapes</h2>
+            <div class="close-wrapper">
+                <img alt="icon close" src="assets/icon-close.png" />
+            </div>
+        </div>
+        <div class="list-menu">
+            <nav>
+                <a target="_parent" href="index.html">Home</a>
+                <a target="_parent" href="index.html">Speciales</a>
+                <a target="_parent" href="index.html">Last minute</a>
+                <a target="_parent" href="index.html">Register/Login</a>
+            </nav>
+        </div>
+        <div class="social-icons">
+            <div class="instagram-button">
+                <button type="button">
+                    <i class="fas fa-camera-retro"></i>
+                </button>
+            </div>
+            <div class="facebook-wrapper">
+                <button type="button">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="resources/main.js"></script>
+    <noscript>
+        Your browser currently does not support or has JS disabled.
+    </noscript>
 </body>
 
 </html>

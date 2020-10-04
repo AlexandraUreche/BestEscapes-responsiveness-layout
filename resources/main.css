@@ -8,244 +8,280 @@ html, body{
     height: 100%;
 }
 .principal-wrapper{
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     font-family: 'Literata', serif;
     font-weight: 200;
     font-size: 15px;
-    
 }
-
 header{
-    height: 50px;
+    height: 10%;
 }
-header,  .bottom-wrapper, section,summary{
+.section-wrapper{
+    height: 90%;
+}
+header, header .title-wrapper, .menu-wrapper, .menu-desktop,
+.main-wrapper, .left-side-wrapper,summary,.gallery-nav, footer{
     display: flex;
 }
-
-.title-wrapper, .menu-wrapper{
-    height: 100%;
+header, .menu-wrapper, .menu-desktop{
+   
+    font-weight: 500;
 }
-.title-wrapper, aside {
+header,.menu-desktop{
+    justify-content: space-between;
+   
+}
+
+header .title-wrapper,.menu-wrapper{
+    align-items: center;
+}
+
+header .title-wrapper, .left-side-wrapper {
     width: 30%;
-    padding-left: 20px;
+    padding-left: 25px;
     
 }
-.menu-wrapper, main{
+.menu-wrapper{
     width: 70%;
 }
+.menu-desktop{
+    width: 100%;
+}
 
-h1, h2,h3, .submit-button{
+h2,h3, .submit-button{
     margin: 0;
     font-weight: 900;
 }
-.title-wrapper h2{
+h2{
     font-size: 30px;
-    padding-bottom: 10px;
 }
-summary h1{
-    font-size: 50px;
-    
+summary{
+    width: 75%;
+    height: 55%;  
 }
 
-h3,.submit-button{
-    font-size: 20px;
+.title-wrapper div{
+    font-size: 40px;
+    font-weight: 900;
 }
-nav{
-   
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+.title-wrapper div:first-child{
+    font-size: 70px;
 }
-nav a:last-child{
-    padding-right: 25px;
-}
-nav a:first-child{
-    padding-left: 10px;
+.title-wrapper div:nth-child(2){
+    margin-bottom: 15px;
 }
 a{
     text-decoration: none;
     color: rgba(221,221,221);
 }
-.menu-mobile {
+.menu-desktop a:last-child{
+    padding-right: 25px;
+}
+.menu-mobile, .mobile-menu-wrapper.hidden{
     display: none;
+}
+.menu-mobile {
     color: #fff;
     justify-content: center;
     text-align: end;
 }
-
-.menu-mobile i {
+.menu-mobile i, .gallery-nav i {
     font-size: 30px;
 }
 
-section {
-    
-    height: 700px;
-    flex-direction: row-reverse;
+.main-wrapper{
+    height: 75%;
+}
+.left-side-wrapper{
+    position: relative;
+}
+.left-side-wrapper, summary{
+   justify-content: center;
+   flex-direction: column;
+}
+p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+summary p:last-child, .black-article p:last-child,
+.nude-article p:last-child{
+    margin-bottom: 0;
 }
 
-aside, main {
+.black-article, .nude-article, .submit-button{
+    color:#fff;
+}
+.black-article, .nude-article{
+    
+    padding: 15px;
+}
+.black-article, .mobile-menu-wrapper{
+    background-color: black;
+}
+.black-article{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    left: 90%;
+    top: 88%;
+}
+.left-side-wrapper, .image-wrapper{
     height: 100%;
-    display: flex;
-    
-    
 }
-summary{
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-}
-
-main{
-    
+.image-wrapper{
+    width: 70%;
     background-image: url(../assets/bg.jpg);
     background-size:cover;
     background-position: right;
     background-repeat: no-repeat;
 }
 
-
-.bottom-wrapper{
+.gallery-nav{
+    justify-content: space-between;
+    width: 100px;
+}
+.gallery-nav button{
+    width: 40px;
+    height: 40px;
+    color: rgba(245, 224, 195);
+    background: none;
+    border: none;
+    border: 1px solid rgba(245, 224, 195);
+}
+footer{
+    justify-content: flex-end;
+    height: 25%;
     width: 100%;
-    align-items: flex-end;
 }
-.black-article, .nude-article,.submit-button{
-    color:#fff;
-    padding: 10px;
-}
-.black-article{
-    width: 450px;
-    height: 250px;
-    background-color: black;
-}
-
 .nude-article{
-    width: 650px;
-    height: 200px;
+    width: 43%;
+    height: 100%;
 }
 .nude-article, .submit-button{
     background-color: rgba(245, 224, 195);
 }
-
-
-
-.gallery-nav{
-    display: flex;
-    justify-content: center;
-    max-width: 330px;
-}
-.gallery-nav button{
-    /* nu inteleg de ce nu iai pus 
-    pur si simplu iconitele ca si content in button si te-ai complicat cu font-size:0, si before */
-    font-size: 0;
-    line-height: 0;
-    cursor: pointer;
-    color: transparent;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    background: #efefef;
-    width: 35px;
-    height: 35px;
-    margin: 0 5px;
-}
-
-.gallery-nav .previous-arrow::before {
-    /* pentru content ai nevoie de unicode si setul de coduri atasate. iti atasez si un screenshot de unde se gasesc unicode-urile in documentatie. desi insist nu este cea mai simpla metoda cea pe care ai ales-o. */
-    content: '\f359';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-.gallery-nav .next-arrow::before{
-    content: '>';
-}
-.previous-arrow::before, .next-arrow::before {
-    height: 35px;
-    font-family: fontello;
-    font-size: 20px;
-    color: #323c41;
-    line-height: 35px;
-    text-align: center;
-}
 .submit-button{
     border:1px solid #fff;
-    width: 80px;
-    height: auto;
+    font-size: 20px;
+    width: 100px;
+    height: 45px;
 }
 
-
-aside .black-article, footer{
-    display: none;
-}
-
-/*mobile settings*/
-
-
-@media (max-width: 640px) {
-    .title-wrapper,section{
-    
-        width: 100%;
-        height: auto;
-    }
-    .title-wrapper h2{
-        line-height: 40px;
-    }
-    section {
-        flex-direction: column;
-       
-    }
-    .menu-mobile, aside .black-article,footer {
-         display: block;  
-    }
-    aside, main,footer {
-        width: 100%;
+@media (max-width: 599px) {
+   
+    .principal-wrapper{
         font-size: 10px;
     }
-    aside, main{
-        /* prea putin ai limitat la 200px aici. pe mobile ar trebui sa foloseasca cel putin tot viewport-ul vertical si daca e nevoie sa se apeleze si la scroll. iti atasez cum vad eu, imi ramane foarte mult spatiu care nu e folosit deloc si e pacat de el */
-        height: 200px;
+   .title-wrapper div{
+        font-size: 18px;
     }
-    footer{
-        height: auto;
-       
+    .title-wrapper div:first-child{
+        font-size: 20px;
     }
-    .aside, footer{
+    header .title-wrapper, header .menu-wrapper{
+        width:50% ;
+    }
+    .menu-wrapper{
+        justify-content: flex-end;
+        padding-right: 15px;
+    }
+    header .title-wrapper,
+    .left-side-wrapper, .left-side-wrapper .black-article
+    {
+        padding:0px;
+        padding: 5px 0 0 10px;
+    }
+    .main-wrapper{
+        flex-direction: column-reverse;
+    }
+    .main-wrapper .left-side-wrapper, .main-wrapper .image-wrapper{
+        height: 50%;
+        width: 100%;
+    }
+
+    .left-side-wrapper summary, .left-side-wrapper .black-article{
+        height: 100%; 
+        width: 50%;
+        justify-content: unset;
+    }
+    .black-article{
+        position: unset;
+    } 
+    .left-side-wrapper{
         flex-direction: row;
     }
-    .aside{
-      
-        margin-right: 0;
-       
-    } 
-    
-    summary h1{
-        font-size: 15px;
-    
-    }
-    .title-wrapper h2{
-        font-size: 12px;
-    }
-    
-    h3,.submit-button{
-        font-size: 10px;
+    .menu-mobile{
+        display: block;
+    }  
+    .nude-article{
+        width: 100%;
+        height: 100%;
     }
     .submit-button{
-        padding: 5px;
-        width: 60px;
-       height: 25px;
+        height: 30px;
     }
-    footer .nude-article,aside summary, aside .black-article{
-        height: 100%;
-        width: 100%;
-
+    .submit-button, h2{
+        font-size: 15px;
     }
-    .nude-article{
-        padding: 5px 0 7px 5px;
+    h3{
+        font-size: 13px;
     }
-    .menu-desktop,
-     .bottom-wrapper .black-article,
-     .bottom-wrapper .nude-article,
-     .gallery-nav {
+    .menu-desktop,.gallery-nav{
         display: none;
+    }
+
+    #MobileWrapper{
+        width: 100%;
+        height: 100%;
+        color: white;
+       /* position: fixed;*/
+        font-size: 18px;
+        z-index: 2;
+    }
+    .mobile-menu-wrapper .title-wrapper h2{
+        color: white;
+        padding: 10px 0 0 10px;
+    }
+    .mobile-menu-wrapper, .list-menu nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .mobile-menu-wrapper .title-wrapper{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+   .mobile-menu-wrapper .title-wrapper .close-wrapper{
+        width: 30px;
+        height: 30px;
+        padding: 10px 10px 0 0;
+    }
+    .close-wrapper img{
+        width: 100%;
+        height: auto;
+    }
+    .social-icons{
+        height: 10%;
+    }
+    .social-icons, .social-icons div{
+        display: flex;
+    }
+    .social-icons div{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        border-bottom: none;
+    }
+    .social-icons div:first-child{
+        border-left: none;
+    }
+    .social-icons div:nth-child(2){
+        border-right: none;
     }
 }
